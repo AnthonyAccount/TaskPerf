@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.spc{
+    margin-right: 20%;
+}
+.sp{
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+.input{
+    border-color: black;
+}
+.gr{
+    margin-left: 3%;
+}
+.footer {
+    background-color: gray;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    margin-top: 50px;
+}
