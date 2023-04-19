@@ -22,3 +22,32 @@
     text-align: center;
     margin-top: 50px;
 }
+
+
+.showing-image {
+    width: 19rem;
+    height: 24rem;
+    background-image: url("../img/1books.jpg");
+    background-size: cover;
+    background-position: center;
+    border: 3px solid black;
+    border-radius: 25px;
+   animation: change 30s infinite ease-in-out;
+}
+@keyframes change {
+    20% {
+        background-image: url("../img/2ndbook.jpg");
+    }
+    40% {
+        background-image: url("../img/3rdbook.jpg");
+    }
+    60% {
+        background-image: url("../img/4thbook.jpg");
+    }
+    80% {
+        background-image: url("../img/5thbook.jpg");
+    }
+    100% {
+        background-image: url("../img/1books.jpg");
+    }
+}

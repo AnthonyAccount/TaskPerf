@@ -41,19 +41,19 @@
                 </div>
                 <div class="col-lg-7 px-5 pt-5">
                     <h4 class="text-xl font-medium"> Register your account</h4>
-                    <form>
+                    <form action="sign_up.php" method="post">
                         <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
 
                             <div class="form-row " >
                             <div class="col-lg-5">
-                                <input type="Enter your last name"
+                                <input type="Enter your last name" id="lastname" name="lastname"
                                     class="form-control my-3 p-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                                     placeholder="Enter your last name">
                             
                             </div>
                             <div class="form-row mt-0">
                             <div class="col-lg-12 ">
-                                  <input type="Enter your first name"
+                                  <input type="Enter your first name" id="firstname" name="firstname"
                                       class="form-control my-3 p-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                                       placeholder="Enter your first name">
                             </div>
@@ -61,14 +61,14 @@
                             </div>
                             <div class="form-row">
                               <div class="col-lg-10 ">
-                                  <input type="Enter your email"
+                                  <input type="Enter your email" id="email" name="email"
                                       class="form-control my-3 p-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                                       placeholder="Enter your email">
                               </div>
                               </div>
                               <div class="form-row">
                                 <div class="col-lg-5 ">
-                                    <input type="Create a password"
+                                    <input type="Create a password" id="password" name="password"
                                         class="form-control my-3 p-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                                         placeholder="Create a password">
                                 
@@ -90,7 +90,7 @@
                               <br>
                               
                               <div class="flex mb-10">
-                                <button type="submit" onclick="window.location.href='../src/index.html';" class="text-white bg-gray-900 hover:bg-black font-medium rounded-2xl text-sm px-4 py-2 text-center mr-3 md:mr-0">
+                                <button type="submit" class="text-white bg-gray-900 hover:bg-black font-medium rounded-2xl text-sm px-4 py-2 text-center mr-3 md:mr-0">
                                   <a class="btn">REGISTER</a>
                                 </button>
 
