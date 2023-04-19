@@ -25,8 +25,7 @@
 
 
 .showing-image {
-    width: 19rem;
-    height: 24rem;
+   
     background-image: url("../img/1books.jpg");
     background-size: cover;
     background-position: center;

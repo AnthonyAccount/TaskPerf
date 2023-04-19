@@ -578,6 +578,11 @@ video {
   z-index: 20;
 }
 
+.mx-10 {
+  margin-left: 2.5rem;
+  margin-right: 2.5rem;
+}
+
 .mx-52 {
   margin-left: 13rem;
   margin-right: 13rem;
@@ -820,6 +825,11 @@ video {
   padding: 1rem;
 }
 
+.px-3 {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
 .px-4 {
   padding-left: 1rem;
   padding-right: 1rem;
@@ -830,14 +840,14 @@ video {
   padding-right: 1.25rem;
 }
 
-.px-60 {
-  padding-left: 15rem;
-  padding-right: 15rem;
-}
-
 .px-8 {
   padding-left: 2rem;
   padding-right: 2rem;
+}
+
+.py-1 {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
 }
 
 .py-2 {
@@ -852,6 +862,10 @@ video {
 
 .pb-8 {
   padding-bottom: 2rem;
+}
+
+.pl-10 {
+  padding-left: 2.5rem;
 }
 
 .pt-5 {
@@ -896,10 +910,6 @@ video {
 
 .font-semibold {
   font-weight: 600;
-}
-
-.uppercase {
-  text-transform: uppercase;
 }
 
 .text-black {
@@ -966,8 +976,6 @@ video {
 }
 
 .showing-image {
-  width: 19rem;
-  height: 24rem;
   background-image: url("../img/1books.jpg");
   background-size: cover;
   background-position: center;
