@@ -1,35 +1,54 @@
 <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $lastname = $_POST["lastname"];
-    $firstname = $_POST["namefirst"];
-    $email = $_POST["email"];
-    $password = $_POST["password"];
+include('conn.php');
 
-    // Perform validation and database operations
-    // For example, you can check if the fields are not empty,
-    // validate email format, and insert the data into a database.
-    
-    // Example validation
-    if (empty($lastname) || empty($firstname) || empty($email) || empty($password)) {
-        echo "All fields are required!";
+if(isset($_POST['submit'])) {
+    $lname = $_POST['FirstName'];
+    $fname = $_POST['LastName'];
+    $email = $_POST['Email'];
+    $password = sha1($_POST['Password']);
+
+    // Check if email already exists in the database
+    $stmt = $conn->prepare("SELECT * FROM sign_up WHERE email=?");
+    $stmt->bind_param("s", $email);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    $count = mysqli_num_rows($result);
+
+    // If email already exists, display an error message
+    if($count > 0) {
+        echo "<script>alert('Email already exists in the database!');</script>";
     } else {
-        // Insert data into the database or perform other operations
-        // Here, you can use database libraries or functions to perform database operations
-        // For example, you can use PDO or MySQLi to connect to a MySQL database
-
-        // Inserting data into a MySQL database using PDO with prepared statements and bind parameters
-        // Replace DB_HOST, DB_NAME, DB_USER, and DB_PASSWORD with your database credentials
-        $conn = new PDO("mysql:host=DB_HOST;dbname=DB_NAME", "DB_USER", "DB_PASSWORD");
-        $stmt = $conn->prepare("INSERT INTO sign_up (lastname, firstname, email, password) VALUES (?, ?, ?)");
-        $stmt->bindParam(1, $username);
-        $stmt->bindParam(2, $email);
-        $stmt->bindParam(3, $password);
-
-        if ($stmt->execute()) {
-            echo "Sign up successful!";
+        // If email does not exist, insert data into the database
+        $stmt = $conn->prepare("INSERT INTO sign_up ( lastname, firstname, email, Password)
+                VALUES (?, ?, ?, ?)");
+        $stmt->bind_param("ssss", $lname, $fname, $email, $password);
+        if($stmt->execute()) {
+            header("location:signup.html");
+            echo "<script>alert('Data saved successfully!');</script>";
         } else {
-            echo "Error inserting data into the database.";
+            echo "Error: " . $stmt->error;
         }
     }
 }
+
+
+if(isset($_POST['login'])){
+    $email = mysqli_real_escape_string($conn, $_POST['email']);
+    $password = mysqli_real_escape_string($conn, $_POST['password']);
+    $password = sha1($password);
+
+    $stmt = $conn->prepare("SELECT * FROM users WHERE Email=? and Password=?");
+    $stmt->bind_param("ss", $email, $password);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    $num = mysqli_num_rows($result);
+
+    if($num>0){
+        $_SESSION['email'] = $email;
+        header("location:../Pages/index.html");
+    }else{
+        echo"<script>alert('something went wrong try again')</script>";
+    }
+}
+
 ?>

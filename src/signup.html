@@ -1,114 +1,128 @@
 <!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-        crossorigin="anonymous">
-    <!-- Google Fonts  -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;1,500&display=swap" rel="stylesheet">
-    <link href="../dist/output.css" rel="stylesheet">
-    <title>Sign Up PAGE </title>
-</head>
-
-<body class="bg-gray-200">
-  <nav class="bg-gray-100  fixed w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600">
-    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-2">
-    <a href="https://flowbite.com/" class="flex items-center">
-        <img src="../img/logo.png" class="h-8 mr-3" alt="Flowbite Logo">
-        <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">BOOK STORE</span>
-    </a>
-    <div class="flex md:order-2">
-      <button type="button" onclick="window.location.href='./index.html';" class="text-white bg-gray-900 hover:bg-blue-800 font-medium rounded-2xl text-sm text-center mr-3 md:mr-0"><a class="btn">Home</a></button>
-    </div>
-    </div>
-</nav>
-<br>
-    <section class="Form my-4 mx-52">
-      <br>
-      <br>
-        <div class="container bg-black">
-            <div class="row bg-white rounded-lg shadow-lg">
-
-                <div class="col-lg-4 mt-1 content-center">
-                    <img src="../img/signup-book.jpg"
-                        class="object-cover w-full h-full rounded-lg rounded-r-none" alt="thriftstoreitem">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- Bootstrap CSS -->
+        <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+            crossorigin="anonymous"
+        >
+        <!-- Google Fonts  -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;1,500&display=swap" rel="stylesheet">
+        <link href="../dist/output.css" rel="stylesheet">
+        <title>Sign Up PAGE</title>
+    </head>
+    <body class="bg-gray-200">
+        <nav class="bg-gray-100  fixed w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600">
+            <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-2">
+                <a href="https://flowbite.com/" class="flex items-center">
+                    <img src="../img/logo.png" class="h-8 mr-3" alt="Flowbite Logo">
+                    <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">BOOK STORE</span>
+                </a>
+                <div class="flex md:order-2">
+                    <button type="button" onclick="window.location.href='./index.html';" class="text-white bg-gray-900 hover:bg-blue-800 font-medium rounded-2xl text-sm text-center mr-3 md:mr-0">
+                        <a class="btn">Home</a>
+                    </button>
                 </div>
-                <div class="col-lg-7 px-5 pt-5">
-                    <h4 class="text-xl font-medium"> Register your account</h4>
-                    <form action="sign_up.php" method="post">
-                        <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
-
-                            <div class="form-row " >
-                            <div class="col-lg-5">
-                                <input type="Enter your last name" id="lastname" name="lastname"
-                                    class="form-control my-3 p-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                                    placeholder="Enter your last name">
-                            
-                            </div>
-                            <div class="form-row mt-0">
-                            <div class="col-lg-12 ">
-                                  <input type="Enter your first name" id="firstname" name="firstname"
-                                      class="form-control my-3 p-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                                      placeholder="Enter your first name">
-                            </div>
-                            </div>
-                            </div>
-                            <div class="form-row">
-                              <div class="col-lg-10 ">
-                                  <input type="Enter your email" id="email" name="email"
-                                      class="form-control my-3 p-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                                      placeholder="Enter your email">
-                              </div>
-                              </div>
-                              <div class="form-row">
-                                <div class="col-lg-5 ">
-                                    <input type="password" id="password" name="password"
-                                        class="form-control my-3 p-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                                        placeholder="Create a password">
-                                
+            </div>
+        </nav>
+        <br>
+        <section class="Form my-4 mx-52">
+            <br>
+            <br>
+            <div class="container bg-black">
+                <div class="row bg-white rounded-lg shadow-lg">
+                    <div class="col-lg-4 mt-1 content-center">
+                        <img src="../img/signup-book.jpg" class="object-cover w-full h-full rounded-lg rounded-r-none" alt="thriftstoreitem">
+                    </div>
+                    <div class="col-lg-7 px-5 pt-5">
+                        <h4 class="text-xl font-medium"> Register your account</h4>
+                        <form action="signup.php" method="post">
+                            <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4" >
+                                <div class="form-row ">
+                                    <div class="col-lg-5">
+                                        <input
+                                            type="Enter your last name"
+                                            id="lastname"
+                                            name="LastName"
+                                            class="form-control my-3 p-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                            placeholder="Enter your last name"
+                                        >
+                                    </div>
+                                    <div class="form-row mt-0">
+                                        <div class="col-lg-12 ">
+                                            <input
+                                                type="Enter your first name"
+                                                id="firstname"
+                                                name="FirstName"
+                                                class="form-control my-3 p-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                                placeholder="Enter your first name"
+                                            >
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="form-row">
-                                  <div class="col-lg-12 ">
-                                      <input type="Confirm a password"
-                                          class="form-control my-3 p-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                                          placeholder="Confirm password">
-                                  </div>
-                                  </div>
-                                  </div>
-                              <div class="flex items-center mt-6">
-                                <div class="w-full">
-                                  <input type="checkbox" class="mr-2" />
-                                  <label for="agree" class="text-gray-500 text-sm">By creating an account, you agree to our terms and privacy policy.</label>
+                                    <div class="col-lg-10 ">
+                                        <input
+                                            type="Enter your email"
+                                            id="email"
+                                            name="Email"
+                                            class="form-control my-3 p-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                            placeholder="Enter your email"
+                                        >
+                                    </div>
                                 </div>
-                              </div>
-                              <br>
-                              
-                              <div class="flex mb-10">
-                                <button type="submit" class="text-white bg-gray-900 hover:bg-black font-medium rounded-2xl text-sm px-4 py-2 text-center mr-3 md:mr-0">
-                                  <a class="btn">REGISTER</a>
-                                </button>
-
-                                <p class="mt-3">
-                                  Already have an account? <a href="./Log.html" class="text-blue-500">Login here</a>
-                                </p>
-                              </div>
-                              
-                        </div>
-                        <br>    
-                        </form>
-                      </div>
+                                <div class="form-row">
+                                    <div class="col-lg-5 ">
+                                        <input
+                                            type="password"
+                                            id="password"
+                                            name="Password"
+                                            class="form-control my-3 p-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                            placeholder="Create a password"
+                                        >
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="col-lg-12 ">
+                                            <input type="Confirm a password" class="form-control my-3 p-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Confirm password">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex items-center mt-6">
+                                    <div class="w-full">
+                                        <input type="checkbox" class="mr-2">
+                                        <label for="agree" class="text-gray-500 text-sm">By creating an account, you agree to our terms and privacy policy.</label>
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="flex mb-10">
+                                    <button
+                                        type="submit"
+                                        name="submit"
+                                        id="submit"
+                                        class="text-white bg-gray-900 hover:bg-black font-medium rounded-2xl text-sm px-4 py-2 text-center mr-3 md:mr-0"
+                                    >
+                                        <a class="btn">REGISTER</a>
+                                    </button>
+                                 
+                                    <p class="mt-3">
+                                        Already have an account?
+                                        <a href="./Log.html" class="text-blue-500">Login here</a>
+                                    </p>
+                                </div>
+                              </form>
+                            <br>
+                          </form>
                     </div>
-                    </form>
-                </div>
-
+                  </div>
             </div>
         </div>
-    </section>
-    </body>
+    </div>
+</section>
+</body>
 </html>
